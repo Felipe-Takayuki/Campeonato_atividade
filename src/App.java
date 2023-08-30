@@ -29,5 +29,19 @@ public class App {
             partidas[i].definirResultado();
             partidas[i].apresentarResultado();
         }
+        int maiorvitoria = 0;
+        int newnota = 0;
+        String nome = "";
+        for (Time time : times) {
+            newnota = time.getVitorias();
+            if(maiorvitoria < newnota) {
+                nome = time.getNome();
+                maiorvitoria = newnota;
+            }
+            // guardarvitorias  += time.getVitorias();
+            // System.out.println(guardarvitorias);
+        }
+        System.out.println(nome);
+        System.out.println(maiorvitoria);
     }
 }
