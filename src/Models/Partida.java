@@ -36,13 +36,13 @@ public class Partida {
         this.visitante = visitante;
     }
     public int getGolsMandante() {
-        return golsMandante = 0;
+        return golsMandante;
     }
     public void setGolsMandante(int golsMandante) {
         this.golsMandante = golsMandante;
     }
     public int getGolsVisitantes() {
-        return golsVisitantes = 0;
+        return golsVisitantes;
     }
     public void setGolsVisitantes(int golsVisitantes) {
         this.golsVisitantes = golsVisitantes;
