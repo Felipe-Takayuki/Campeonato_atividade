@@ -219,13 +219,12 @@ public class App {
         partidas[3] = new Partida(60, "06/06/2020", times[0], times[8]);
         partidas[4] = new Partida(40, "04/04/2020", times[7], times[0]);
         partidas[5] = new Partida(50, "05/05/2020", times[7], times[8]);
-        for (int i = 0; i < times.length; i++) {
+        for (int i = 0; i < times.length; i++) { 
             times[i].apresentar();
         }
         for (int i = 0; i < partidas.length; i++) {
             partidas[i].definirResultado();
             partidas[i].apresentarResultado();
         }
-    }
 }
 ```
