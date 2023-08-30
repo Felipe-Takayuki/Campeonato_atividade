@@ -22,7 +22,7 @@ public class App {
         partidas[3] = new Partida(60, "06/06/2020", times[0], times[8]);
         partidas[4] = new Partida(40, "04/04/2020", times[7], times[0]);
         partidas[5] = new Partida(50, "05/05/2020", times[7], times[8]);
-        for (int i = 0; i < times.length; i++) {
+        for (int i = 0; i < times.length; i++) { 
             times[i].apresentar();
         }
         for (int i = 0; i < partidas.length; i++) {
@@ -31,17 +31,16 @@ public class App {
         }
         int maiorvitoria = 0;
         int newnota = 0;
-        String nome = "";
+        Time timevencedor = new Time();
+        
         for (Time time : times) {
             newnota = time.getVitorias();
             if(maiorvitoria < newnota) {
-                nome = time.getNome();
-                maiorvitoria = newnota;
+                timevencedor = time;
             }
             // guardarvitorias  += time.getVitorias();
             // System.out.println(guardarvitorias);
         }
-        System.out.println(nome);
-        System.out.println(maiorvitoria);
+       System.out.println("time vencedor: " + timevencedor.getNome() + " quantidade de gols feitos: " + timevencedor.getTotalGolsFeitos()  + " vitórias: " + timevencedor.getVitorias() );
     }
 }

@@ -12,6 +12,24 @@ public class Time {
     int vitorias;
     int empates;
     int derrotas;
+    int totalGolsFeitos;
+    int totalGolsSofridos;
+
+    public int getTotalGolsFeitos() {
+        return totalGolsFeitos;
+    }
+
+    public void setTotalGolsFeitos(int totalGolsFeitos) {
+        this.totalGolsFeitos = totalGolsFeitos;
+    }
+
+    public int getTotalGolsSofridos() {
+        return totalGolsSofridos;
+    }
+
+    public void setTotalGolsSofridos(int totalGolsSofridos) {
+        this.totalGolsSofridos = totalGolsSofridos;
+    }
 
     public int getCodigo() {
         return codigo;
@@ -114,10 +132,13 @@ public class Time {
         this.estadioProprio = estadioProprio;
 
     }
+    public Time(){}
 
     public void registrarResultado(int gf, int gs) {
         this.golsFeitos = gf;
         this.golsSofridos = gs;
+        this.totalGolsFeitos +=gf;
+        this.totalGolsSofridos +=gs;
         if (gf > gs) {
             this.vitorias++;
         } else if (gf == gs) {
