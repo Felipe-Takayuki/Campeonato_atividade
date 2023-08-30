@@ -152,8 +152,8 @@ registra se o time venceu, empatou ou perdeu
 
 ```java
 public void registrarResultado(int gf, int gs) {
-        this.golsFeitos += gf;
-        this.golsSofridos += gs;
+        this.golsFeitos = gf;
+        this.golsSofridos = gs;
         if (gf > gs) {
             this.vitorias++;
         } else if (gf == gs) {
