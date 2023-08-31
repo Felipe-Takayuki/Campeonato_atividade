@@ -146,9 +146,11 @@ public void setDerrotas(int derrotas) {
     }
 ```
 
-funções especiais 
+Você poderia se perguntar, mas isso não significaria que esses valores seriam sempre 0?
 
-registra se o time venceu, empatou ou perdeu
+não devido a função abaixo que muda esse valor recebendo dois parâmetros 
+
+e registra se o time venceu, empatou ou perdeu, e também devido a função que define o resultado da partida que esta na classe Partida com o intuito de gerar uma quantidade aleatórias de gols por rodada e chama essa função
 
 ```java
 public void registrarResultado(int gf, int gs) {
@@ -219,12 +221,13 @@ public class App {
         partidas[3] = new Partida(60, "06/06/2020", times[0], times[8]);
         partidas[4] = new Partida(40, "04/04/2020", times[7], times[0]);
         partidas[5] = new Partida(50, "05/05/2020", times[7], times[8]);
-        for (int i = 0; i < times.length; i++) { 
+        for (int i = 0; i < times.length; i++) {
             times[i].apresentar();
         }
         for (int i = 0; i < partidas.length; i++) {
             partidas[i].definirResultado();
             partidas[i].apresentarResultado();
         }
+    }
 }
 ```
