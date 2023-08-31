@@ -150,7 +150,7 @@ Você poderia se perguntar, mas isso não significaria que esses valores seriam 
 
 não devido a função abaixo que muda esse valor recebendo dois parâmetros 
 
-e registra se o time venceu, empatou ou perdeu, e também devido a função que define o resultado da partida que esta na classe Partida com o intuito de gerar uma quantidade aleatórias de gols por rodada e chama essa função
+e registra se o time venceu, empatou ou perdeu, e também devido a função que define o resultado da partida que esta na classe Partida com o intuito de gerar uma quantidade aleatórias de gols por rodada e faz a chamada dessa função
 
 ```java
 public void registrarResultado(int gf, int gs) {
