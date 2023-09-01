@@ -70,7 +70,9 @@ public class Partida {
         this.data = data;
         this.mandante = mandante;
         this.visitante = visitante;
- 
+        this.realizada = false;
+        this.golsMandante = 0;
+        this.golsVisitantes = 0;
     }
     public Partida(){}
     public void definirResultado(){ 
