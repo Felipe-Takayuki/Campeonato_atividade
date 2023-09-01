@@ -88,7 +88,7 @@ public class Time {
     }
 
     public void setGolsFeitos(int golsFeitos) {
-        this.golsFeitos = 0;
+        this.golsFeitos = golsFeitos;
     }
 
     public int getGolsSofridos() {
@@ -96,7 +96,7 @@ public class Time {
     }
 
     public void setGolsSofridos(int golsSofridos) {
-        this.golsSofridos = 0;
+        this.golsSofridos = golsSofridos;
     }
 
     public int getVitorias() {
@@ -104,7 +104,7 @@ public class Time {
     }
 
     public void setVitorias(int vitorias) {
-        this.vitorias = 0;
+        this.vitorias = vitorias;
     }
 
     public int getEmpates() {
@@ -112,7 +112,7 @@ public class Time {
     }
 
     public void setEmpates(int empates) {
-        this.empates = 0;
+        this.empates = empates;
     }
 
     public int getDerrotas() {
@@ -120,7 +120,7 @@ public class Time {
     }
 
     public void setDerrotas(int derrotas) {
-        this.derrotas = 0;
+        this.derrotas = derrotas;
     }
 
     public Time(int codigo, String nome, String cidade, int anoFundacao, String serie, Boolean estadioProprio) {
@@ -130,6 +130,11 @@ public class Time {
         this.anoFundacao = anoFundacao;
         this.serie = serie;
         this.estadioProprio = estadioProprio;
+        this.golsFeitos = 0;
+        this.derrotas = 0;
+        this.golsSofridos = 0;
+        this.vitorias = 0; 
+        this.empates = 0;
 
     }
     public Time(){}
