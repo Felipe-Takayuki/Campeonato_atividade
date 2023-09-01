@@ -20,12 +20,14 @@ Nesse projeto era necessário duas classes uma para partida e outra para os time
 e o seu construtor apenas `int codigo, String data, Time mandante, Time visitante` pois o resto será definido de outras formas 
 
 ```java
-public Partida(int codigo, String data, Time mandante, Time visitante) {
+    public Partida(int codigo, String data, Time mandante, Time visitante) {
         this.codigo = codigo;
         this.data = data;
         this.mandante = mandante;
         this.visitante = visitante;
- 
+        this.realizada = false;
+        this.golsMandante = 0;
+        this.golsVisitantes = 0;
     }
 ```
 
@@ -59,14 +61,6 @@ public void definirResultado(){
         } else {
             System.out.println("não é possível definir o resultado");
         }
-    }
-```
-
-getters e setters modificados
-
-```java
-public boolean isRealizada() {
-        return realizada = false;
     }
 ```
 
@@ -110,47 +104,16 @@ public Time(int codigo, String nome, String cidade, int anoFundacao, String seri
         this.anoFundacao = anoFundacao;
         this.serie = serie;
         this.estadioProprio = estadioProprio;
-
-    }
-```
-
-Getters e Setters modificados:
-
-```java
-public void setGolsSofridos(int golsSofridos) {
-        this.golsSofridos = 0;
-    }
-```
-
-```java
-public void setGolsFeitos(int golsFeitos) {
         this.golsFeitos = 0;
-    }
-```
-
-```java
-public void setVitorias(int vitorias) {
-        this.vitorias = 0;
-    }
-```
-
-```java
-public void setEmpates(int empates) {
+        this.derrotas = 0;
+        this.golsSofridos = 0;
+        this.vitorias = 0; 
         this.empates = 0;
     }
 ```
 
-```java
-public void setDerrotas(int derrotas) {
-        this.derrotas = 0;
-    }
-```
-
-Você poderia se perguntar, mas isso não significaria que esses valores seriam sempre 0?
-
-não devido a função abaixo que muda esse valor recebendo dois parâmetros 
-
-e registra se o time venceu, empatou ou perdeu, e também devido a função que define o resultado da partida que esta na classe Partida com o intuito de gerar uma quantidade aleatórias de gols por rodada e faz a chamada dessa função
+esses valores quando iniciados começam por 0, porém com as funções das classes definimos e alteramos esses valores 
+, esses valores não podem estar nos métodos de get e set como eu errei nos commits anteriores, pois quando fossemos usar por exemplo um set não conseguiriamos trocar o valor por esse método mesmo que esta atividade não exija o uso é importante ressaltar. 
 
 ```java
 public void registrarResultado(int gf, int gs) {
