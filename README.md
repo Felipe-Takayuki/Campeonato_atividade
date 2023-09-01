@@ -1,4 +1,4 @@
-# Campeonato
+# Campeonato[FINALIZADO]
 
 Esse projeto é uma foi uma atividade proposta pelo professor para simular um campeonato com pelo menos 9 times.
 
